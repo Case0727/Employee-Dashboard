@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Dashboard </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Employee Dashboard</h1>
+
+    </div>
+
+    <div class="search-container">
+
+        <form action="/search" method="get">
+            <input type="text" name="name" placeholder="Search by name">
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+
+
+    </div>
+
+    <div class="button-container">
+
+        <button>
+            <a href="/add">➕ Add Student</a>
+        </button>
+
+        <button>
+            <a href="/logout">🚪 Logout</a>
+        </button>
+    </div>
+
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th colspan="2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (Users.length> 0) { %>
+                    <% Users.forEach(User=> { %>
+                        <tr>
+
+                            <td>
+                                <%= User._id %>
+                            </td>
+                            <td>
+                                <%= User.name %>
+                            </td>
+                            <td>
+                                <%= User.email %>
+                            </td>
+                            <td>
+                                <%= User.status %>
+                            </td>
+                            <td>
+                                <a href="/edit/<%= User._id %>" class="edit-btn">✏ Edit</a>
+                            </td>
+                            <td>
+                                <a href="/delete/<%= User._id %>" class="action-btn">❌ Delete</a>
+                            </td>
+                        </tr>
+                        <% }) %>
+                            <% } else { %>
+                                <tr>
+                                    <td colspan="5">No Employees found.</td>
+                                </tr>
+                                <% } %>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

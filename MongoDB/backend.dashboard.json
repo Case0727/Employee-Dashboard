@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "67bd64d714fae3cb8086cbb3"
+  },
+  "name": "Chinmay",
+  "email": "satamchinmay27@gamil.com",
+  "status": "Employee"
+},
+{
+  "_id": {
+    "$oid": "67bd64d714fae3cb8086cbb4"
+  },
+  "name": "Suraj",
+  "email": "suraj@gmail.com",
+  "status": "Employee"
+},
+{
+  "_id": {
+    "$oid": "67bd64d714fae3cb8086cbb5"
+  },
+  "name": "Sudhesh",
+  "email": "sudhesh@gmail.com",
+  "status": "Faculty"
+},
+{
+  "_id": {
+    "$oid": "67bd64d714fae3cb8086cbb6"
+  },
+  "name": "Bhumika",
+  "email": "bhumika@gmail.com",
+  "status": "Faculty"
+},
+{
+  "_id": {
+    "$oid": "67bd64d714fae3cb8086cbb7"
+  },
+  "name": "Mansi",
+  "email": "manasi@gmail.com",
+  "status": "HR"
+}]

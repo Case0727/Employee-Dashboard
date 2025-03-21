@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Edit Page </title>
+    <link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h1> Edit User </h1>
+
+    </div>
+
+    <section>
+
+        <form action="/update/<%= User._id %>" class="form" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="name" value="<%= User.name %>" placeholder="Name" required>
+            <br>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" value="<%= User.email %>" placeholder="Email" required>
+            <br>
+
+            <label for="status">Status</label>
+            <input type="text" name="status" value="<%= User.status %>" placeholder="Status" required>
+            <br>
+
+            <button type="submit" class="btn"> Edit </button>
+        </form>
+
+    </section>
+</body>
+
+</html>
