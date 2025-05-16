@@ -22,16 +22,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Session
-
-
-
 app.set("view engine", "ejs")
 
 
 // Connect to Server
 db.then(() => {
     app.listen(port, () => {
-        console.log(`Server is running on port ${port}`);
+        console.log(`Server is running on port http://localhost:${port}`);
     });
 }).catch(err => {
     console.error('Failed to connect to the database:', err);
